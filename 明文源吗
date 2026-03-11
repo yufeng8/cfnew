@@ -474,11 +474,11 @@
                     ev = true;
                 }
 
-            piu = getConfigValue('yxURL', env.yxURL || env.YXURL) || 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+            piu = getConfigValue('yxURL', env.yxURL || env.YXURL) || 'https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt';
             
             cp = getConfigValue('d', env.d || env.D) || '';
             
-                const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+                const defaultURL = 'https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt';
             if (piu !== defaultURL) {
                     directDomains.length = 0;
                     customPreferredIPs = [];
@@ -1625,7 +1625,7 @@
             }
 
             if (epi) {
-            const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+            const defaultURL = 'https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt';
                 if (piu === defaultURL) {
                 try {
                     const dynamicIPList = await fetchDynamicIPs();
@@ -2931,7 +2931,7 @@
                         </div>
                         <div style="margin-bottom: 15px;">
                                 <label style="display: block; margin-bottom: 8px; color: #00ff00; font-weight: bold; text-shadow: 0 0 3px #00ff00;">${t.preferredIPsURL}</label>
-                                <input type="text" id="yxURL" placeholder="${isFarsi ? 'پیش‌فرض: https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt' : '默认: https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt'}" style="width: 100%; padding: 12px; background: rgba(0, 0, 0, 0.8); border: 2px solid #00ff00; color: #00ff00; font-family: 'Courier New', monospace; font-size: 14px;">
+                                <input type="text" id="yxURL" placeholder="${isFarsi ? 'پیش‌فرض: https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt' : '默认: https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt'}" style="width: 100%; padding: 12px; background: rgba(0, 0, 0, 0.8); border: 2px solid #00ff00; color: #00ff00; font-family: 'Courier New', monospace; font-size: 14px;">
                                 <small style="color: #00aa00; font-size: 0.85rem;">${isFarsi ? 'URL منبع لیست IP ترجیحی سفارشی، اگر خالی بگذارید از آدرس پیش‌فرض استفاده می‌شود' : '自定义优选IP列表来源URL，留空则使用默认地址'}</small>
                         </div>
                         
@@ -5566,7 +5566,7 @@
     }
 
     async function fetchAndParseNewIPs() {
-        const url = piu || "https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt";
+        const url = piu || "https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt";
         try {
             const urls = url.includes(',') ? url.split(',').map(u => u.trim()).filter(u => u) : [url];
             const apiResults = await fetchPreferredAPI(urls, '443', 5000);
@@ -5808,8 +5808,8 @@
                     updateCustomPreferredFromYx();
                 }
                 
-                const newPreferredIPsURL = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
-                const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+                const newPreferredIPsURL = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt';
+                const defaultURL = 'https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt';
                 if (newPreferredIPsURL !== defaultURL) {
                     directDomains.length = 0;
                     customPreferredIPs = [];
@@ -6181,7 +6181,7 @@
         
         cp = getConfigValue('d', '') || '';
         
-        piu = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+        piu = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt';
         
         const envFallback = getConfigValue('p', '');
         if (envFallback) {
@@ -6209,7 +6209,7 @@
             disablePreferred = false;
         }
         
-        const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+        const defaultURL = 'https://raw.githubusercontent.com/yufeng8/cfnew/refs/heads/main/zzidcn.txt';
         if (piu !== defaultURL) {
             directDomains.length = 0;
             customPreferredIPs = [];
